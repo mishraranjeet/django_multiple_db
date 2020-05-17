@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from multiple_db_without_model.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test1',testdb_cursor1),
+    path('test2',userdb_cursor2),
 ]
